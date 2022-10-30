@@ -5,7 +5,7 @@ This repository is the official PyTorch implementation of the following paper:
 Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Bilingual Lexicon Induction with Cross-Encoder Reranking*. In Findings of EMNLP 2022. 
 
 <p align="center">
-  <img width="350" src="model.png">
+  <img width="500" src="model.png">
 </p>
 
 ## Dependencies:
