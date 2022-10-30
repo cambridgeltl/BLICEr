@@ -8,6 +8,8 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
   <img width="500" src="model.png">
 </p>
 
+**BLICEr** leverages [Cross Encoders](https://www.sbert.net/examples/applications/cross-encoder/README.html) to refine the cross-lingual word matching scores for Bilingual Lexicon Induction (BLI) / Word Translation tasks.
+
 ## Dependencies:
 
 - PyTorch >= 1.10.1
