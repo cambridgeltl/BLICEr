@@ -8,7 +8,7 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
   <img width="500" src="model.png">
 </p>
 
-**BLICEr** is a post-hoc reranking method that works in the synergy with any given Cross-lingual Word Embedding (CLWE) space to improve Bilingual Lexicon Induction (BLI) / Word Translation. **BLICEr** is applicable to any existing CLWE induction method such as [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), [RCSLS](https://github.com/facebookresearch/fastText/tree/main/alignment), and [VecMap](https://github.com/artetxem/vecmap). Our method first (1) creates a cross-lingual word similarity dataset, comprising positive word pairs (i.e., true translations) and hard negative pairs induced from the original CLWE space, and then 2) fine-tunes an mPLM (e.g., mBERT or XLM-R) in a [Cross Encoder](https://www.sbert.net/examples/applications/cross-encoder/README.html) manner to predict the similarity scores. At inference, we 3) combine the similarity score from the original CLWE space with the score from the BLI-tuned cross-encoder. 
+**BLICEr** is a post-hoc reranking method that works in the synergy with any given Cross-lingual Word Embedding (CLWE) space to improve Bilingual Lexicon Induction (BLI) / Word Translation. **BLICEr** is applicable to any existing CLWE induction method such as [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), [RCSLS](https://github.com/facebookresearch/fastText/tree/main/alignment), and [VecMap](https://github.com/artetxem/vecmap). Our method first **1)** creates a cross-lingual word similarity dataset, comprising positive word pairs (i.e., true translations) and hard negative pairs induced from the original CLWE space, and then **2)** fine-tunes an mPLM (e.g., mBERT or XLM-R) in a [Cross Encoder](https://www.sbert.net/examples/applications/cross-encoder/README.html) manner to predict the similarity scores. At inference, we **3)** combine the similarity score from the original CLWE space with the score from the BLI-tuned cross-encoder. 
 
 ## Dependencies:
 
@@ -20,7 +20,7 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
 ## Get Data and Set Input/Output Directories:
 Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING repo](https://github.com/codogogo/xling-eval) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli); please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
 
-Our BLICEr is compatible with any CLWE backbones; our demo here is based on the state-of-the-art [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) 300-dim C1 CLWEs, which is derived with purely static fastText embeddings (ContrastiveBLI also provides even stronger 768-dim C2 CLWEs which are trained with both fastText and mBERT). Please modify the input/output directories accordingly when using different CLWEs.  
+Our BLICEr is compatible with any CLWE backbones. For brevity, our demo here is based on the state-of-the-art [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) 300-dim C1 CLWEs, which is derived with purely static fastText embeddings (ContrastiveBLI also provides even stronger 768-dim C2 CLWEs which are trained with both fastText and mBERT). Please modify the input/output directories accordingly when using different CLWEs.  
 
 ## Run the Code:
 
