@@ -14,4 +14,4 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
 ## Get Data and Set Input/Output Directories:
 Following our previous work [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING repo](https://github.com/codogogo/xling-eval), please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
 
-We recommend to use [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) (either C1 or C2) as the Cross-lingual Word Embedding (CLWE) backbone. 
+We recommend to use [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) (either its C1 or C2) as the Cross-lingual Word Embedding (CLWE) backbone. 
