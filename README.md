@@ -8,7 +8,7 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
   <img width="500" src="model.png">
 </p>
 
-**BLICEr** is a post-hoc reranking method that works in the synergy with any given Cross-lingual Word Embedding (CLWE) space to improve Bilingual Lexicon Induction (BLI) / Word Translation. **BLICEr** is applicable to any existing CLWE induction method such as [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), [RCSLS](https://github.com/facebookresearch/fastText/tree/main/alignment), and [VecMap](https://github.com/artetxem/vecmap), leverages [Cross Encoders](https://www.sbert.net/examples/applications/cross-encoder/README.html)
+**BLICEr** is a post-hoc reranking method that works in the synergy with any given Cross-lingual Word Embedding (CLWE) space to improve Bilingual Lexicon Induction (BLI) / Word Translation. **BLICEr** is applicable to any existing CLWE induction method such as [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), [RCSLS](https://github.com/facebookresearch/fastText/tree/main/alignment), and [VecMap](https://github.com/artetxem/vecmap).  leverages [Cross Encoders](https://www.sbert.net/examples/applications/cross-encoder/README.html)
 
 ## Dependencies:
 
