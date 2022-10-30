@@ -47,13 +47,13 @@ for (lang1, lang2) in lang_pairs:
 
 
     ROOT_FT = "Directory of Pre-calculated CLWEs".format(train_size)
-    # ContrastiveBLI stage C1 will save mapped CLWEs into the following four files, including the vocabularies (in .npy files) and C1-induced embeddings (in .pt files) for each the source and target languages respectively. Please refer to https://github.com/cambridgeltl/ContrastiveBLI.
+    # ContrastiveBLI stage C1 saves mapped CLWEs into the following four files, including the vocabularies (in .npy files) and C1-induced embeddings (in .pt files) for each of the source and the target languages respectively. Please refer to https://github.com/cambridgeltl/ContrastiveBLI for details.
     l1_voc = ROOT_FT + "/{}2{}_{}_voc.npy".format(lang1,lang2,lang1)
     l1_emb = ROOT_FT + "/{}2{}_{}_emb.pt".format(lang1,lang2,lang1)
     l2_voc = ROOT_FT + "/{}2{}_{}_voc.npy".format(lang1,lang2,lang2)
     l2_emb = ROOT_FT + "/{}2{}_{}_emb.pt".format(lang1,lang2,lang2)
 
-    # The VecMap and RCSLS codes save CLWEs in txt files (e.g., with suffix .tsv, .vec), we also transform them into .npy and .pt files. For ContrastiveBLI, the additional transformation is not needed.
+    # The VecMap and RCSLS codes save CLWEs into txt files (e.g., with suffix .tsv, .vec), we also transform them into .npy and .pt files. For ContrastiveBLI, the additional transformation is not needed.
     if (l1_emb[-3:] == "vec") or (l1_emb[-3:] == "tsv"): 
         voc_l1, embs_l1 = load_embs(l1_emb)
         voc_l2, embs_l2 = load_embs(l2_emb)
