@@ -10,7 +10,15 @@ Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Biling
 
 **BLICEr** is a post-hoc reranking method that works in the synergy with any given Cross-lingual Word Embedding (CLWE) space to improve Bilingual Lexicon Induction (BLI) / Word Translation. **BLICEr** is applicable to any existing CLWE induction method such as [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), [RCSLS](https://github.com/facebookresearch/fastText/tree/main/alignment), and [VecMap](https://github.com/artetxem/vecmap). Our method first **1)** creates a cross-lingual word similarity dataset, comprising positive word pairs (i.e., true translations) and hard negative pairs induced from the original CLWE space, and then **2)** fine-tunes an mPLM (e.g., mBERT or XLM-R) in a [Cross Encoder](https://www.sbert.net/examples/applications/cross-encoder/README.html) manner to predict the similarity scores. At inference, we **3)** combine the similarity score from the original CLWE space with the score from the BLI-tuned cross-encoder. 
 
-As reported in our paper, **BLICEr** is tested in four different BLI setups: **1)** supervised, 5k seed translation pairs, **2)** semi-supervised, 1k seed translation pairs, **3)** unsupervised, 0 seed translation pairs, **4)** zero-shot, i.e., 0 translation pairs directly between the source and the target langugae but we assume seed pairs between them and a third language respectively. 
+As reported in our paper, **BLICEr** is tested in four different BLI setups: 
+
+- **Supervised**, 5k seed translation pairs
+
+- **Semi-supervised**, 1k seed translation pairs
+
+- **Unsupervised**, 0 seed translation pairs
+
+- **Zero-shot**, 0 translation pairs directly between source and target languages but assume seed pairs between them and a third language respectively (no overlapping)
 
 ## Dependencies:
 
