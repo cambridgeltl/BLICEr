@@ -2,7 +2,7 @@
 
 This repository is the official PyTorch implementation of the following paper: 
 
-Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Bilingual Lexicon Induction with Cross-Encoder Reranking*. In Findings of EMNLP 2022. 
+Yaoyiran Li, Fangyu Liu, Ivan Vulić, and Anna Korhonen. 2022. *Improving Bilingual Lexicon Induction with Cross-Encoder Reranking*. In Findings of the Association for Computational Linguistics: EMNLP 2022. [[arXiv]](https://arxiv.org/abs/2210.16953)
 
 <p align="center">
   <img width="500" src="model.png">
@@ -28,7 +28,7 @@ As reported in our paper, **BLICEr** is tested in four different BLI setups:
 - Sentence-Transformers >= 2.1.0
 
 ## Get Data and Set Input/Output Directories:
-Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING repo](https://github.com/codogogo/xling-eval) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli); please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
+Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli); please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
 
 Our BLICEr is compatible with any CLWE backbones. For brevity, our demo here is based on the state-of-the-art [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) 300-dim C1 CLWEs, which is derived with purely static fastText embeddings (ContrastiveBLI also provides even stronger 768-dim C2 CLWEs which are trained with both fastText and mBERT). Please modify the input/output directories accordingly when using different CLWEs.  
 
@@ -36,6 +36,8 @@ Our BLICEr is compatible with any CLWE backbones. For brevity, our demo here is 
 ```bash
 python run_all.py
 ```
+**Output**: source->target and target->source P@1 scores for each of &lambda; values in [0, 0.01, 0.02, ...
+, 0.99, 1.0]. 
 ## Citation:
 Please cite our paper if you find **BLICEr** useful. If you like our work, please ⭐ this repo.
 ```bibtex
