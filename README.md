@@ -28,7 +28,7 @@ As reported in our paper, **BLICEr** is tested in four different BLI setups:
 - Sentence-Transformers >= 2.1.0
 
 ## Get Data and Set Input/Output Directories:
-Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli); please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
+Following [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/), our data are obtained from the [XLING](https://github.com/codogogo/xling-eval) (8 languages, 56 BLI directions in total) and [PanLex-BLI](https://github.com/cambridgeltl/panlex-bli) (15 lower-resource languages, 210 BLI directions in total); please refer to [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) for data preprocessing details.
 
 Our BLICEr is compatible with any CLWE backbones. For brevity, our demo here is based on the state-of-the-art [ContrastiveBLI](https://github.com/cambridgeltl/ContrastiveBLI/) 300-dim C1 CLWEs, which is derived with purely static fastText embeddings (ContrastiveBLI also provides even stronger 768-dim C2 CLWEs which are trained with both fastText and mBERT). Please modify the input/output directories accordingly when using different CLWEs.  
 
@@ -41,10 +41,10 @@ python run_all.py
 ## Citation:
 Please cite our paper if you find **BLICEr** useful. If you like our work, please ⭐ this repo.
 ```bibtex
-@inproceedings{li-etal-2022-bilingual,
+@inproceedings{li-etal-2022-improving-bilingual,
     title     = {Improving Bilingual Lexicon Induction with Cross-Encoder Reranking},
-    author    = {Li, Yaoyiran and Liu, Fangyu and Vulić, Ivan and Korhonen, Anna},
-    booktitle = {In Findings of the Association for Computational Linguistics: EMNLP 2022},    
+    author    = {Li, Yaoyiran  and Liu, Fangyu  and Vuli{\'c}, Ivan  and Korhonen, Anna},
+    booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},
     year      = {2022}
 }
 ```
