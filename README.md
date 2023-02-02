@@ -43,7 +43,7 @@ Please cite our paper if you find **BLICEr** useful. If you like our work, pleas
 ```bibtex
 @inproceedings{li-etal-2022-improving-bilingual,
     title     = {Improving Bilingual Lexicon Induction with Cross-Encoder Reranking},
-    author    = {Li, Yaoyiran  and Liu, Fangyu  and Vuli{\'c}, Ivan  and Korhonen, Anna},
+    author    = {Li, Yaoyiran and Liu, Fangyu and Vuli{\'c}, Ivan and Korhonen, Anna},
     booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2022},
     year      = {2022}
 }
